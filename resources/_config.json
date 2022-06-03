@@ -1,4 +1,6 @@
 {
+  "port": "8081",
+  "host": "http://localhost:8081",
   "appId": "appId",
   "secret": "secret"
 }

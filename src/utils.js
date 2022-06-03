@@ -9,3 +9,9 @@ module.exports.getJwt = async (appId, secret, code) => {
   }
   throw new Error('invalid credentials');
 };
+
+module.exports.authorize = (appId, redirectUri) => {
+  return (req, res, next) => {
+    res.redirect(`https://connect.deezer.com/oauth/auth.php?app_id=${appId}&redirect_uri=${redirectUri}&perms=basic_access,email`);
+  };
+}
