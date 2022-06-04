@@ -19,7 +19,10 @@ app.use('/callback', async (req, res, next) => {
   }
 
   const userProperties = (await axios.get('https://api.deezer.com/user/me?output=json&access_token=' + jwt)).data;
-  res.json(userProperties);
+  res.json({
+      jwt,
+      userProperties
+  });
 
 });
 

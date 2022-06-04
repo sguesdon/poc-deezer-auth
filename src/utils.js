@@ -12,6 +12,6 @@ module.exports.getJwt = async (appId, secret, code) => {
 
 module.exports.authorize = (appId, redirectUri) => {
   return (req, res, next) => {
-    res.redirect(`https://connect.deezer.com/oauth/auth.php?app_id=${appId}&redirect_uri=${redirectUri}&perms=basic_access,email`);
+    res.redirect(`https://connect.deezer.com/oauth/auth.php?app_id=${appId}&redirect_uri=${redirectUri}&perms=basic_access,email,offline_access`);
   };
 }
