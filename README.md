@@ -8,7 +8,7 @@
 git clone git@github.com:sguesdon/poc-deezer-auth.git
 cd poc-deezer-auth
 npm install
-cp ./resources/_config.json to ./resources/config.json
+cp ./resources/_config.json ./resources/config.json
 // complete config with valid deezer app parameters
 npm run start
 ```
